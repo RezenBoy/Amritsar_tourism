@@ -10,9 +10,9 @@ body {
 /* Container Styling */
 .container {
   display: flex;
-  width: 55%;
+  width: 50%;
   border-radius: 5px;
-  overflow: hidden; /* Prevents unwanted stretching */
+  overflow: hidden;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
 }
 
@@ -61,7 +61,7 @@ img {
 /* Style input container */
 .input-container {
   position: relative;
-  width: 85%;
+  width: 87%;
   /* margin-bottom: 15px; */
 }
 
@@ -93,7 +93,7 @@ img {
   background-color: #ffa500;
   color: black;
   font-size: 16px;
-  font-weight: 00;
+  /* font-weight: 00; */
   border-radius: 7px;
   border: none;
   height: 40px;
