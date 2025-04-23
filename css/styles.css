@@ -47,18 +47,18 @@ body {
 }
 
 .about-left img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 5%;
-}
+    width: 100%;     
+    max-width: 400px; 
+    height: auto;    
+    border-radius: 10px; 
+  }
+  
 
 .about-left iframe {
-    border: none;
+    /* border: none;
     width: 100%;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 10px; */
     margin-left: 5%;
 }
 
@@ -68,11 +68,11 @@ body {
 
 .about-right p {
     font-size: 16px;
-    text-align: justify;
+    /* text-align: justify; */
     line-height: 1.5;
 }
 
-/* Read More Blur Effect */
+
 .about-right .blur-text {
     height: 6em;
     overflow: hidden;
@@ -111,12 +111,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     background-color: darkorange;
     height: 200px;
     width: 100%;
     margin: 20px 0;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .services-one {
@@ -169,7 +169,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* 🔧 Refined History Section */
+/*  History section*/
 .history-section {
     display: none;
     animation: fadeIn 0.6s ease-in-out;
@@ -184,9 +184,22 @@ body {
 }
 
 .history-section.active {
-    display: block;
+    display: flex;
+    align-items: flex-start;   /* top-align image & text */
+    gap: 24px; 
 }
-
+.history-section .section-img {
+    flex: 0 0 500px;           /* always 250px wide */
+    max-width: 100%;           /* but never overflow on small screens */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* let the text fill the remaining space */
+  .history-section .section-title,
+  .history-section p {
+    flex: 1;                   /* take up the rest of the row */
+  }
 .history-section h2 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -194,6 +207,10 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.history-section.active .section-img {
+    width: 75%;    /* image takes up 25% of the section’s width */
+    height: auto;
+  }
 
 /* 📷 Image Styling */
 .section-img {
